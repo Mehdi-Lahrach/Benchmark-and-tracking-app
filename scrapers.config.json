@@ -1,0 +1,91 @@
+{
+    "jumia": {
+        "baseURI": "https://www.jumia.ma",
+        "searchSegment" : ["/catalog/?q="],
+        "parentDOM": "div[data-catalog] article.prd",
+        "extractables" : [
+            {
+                "variable": "link",
+                "source": "a.core",
+                "attribute": "href"
+            },
+            {
+                "variable": "img",
+                "source": "div.img-c > img.img",
+                "attribute": "data-src"
+            },
+            {
+                "variable": "name",
+                "source": "div.info > h3.name",
+                "attribute": "_text"
+            },
+            {
+                "variable": "price",
+                "source": "div.info div.prc",
+                "attribute": "_text"
+            },
+            {
+                "variable": "rating_text",
+                "source": "div.info div.stars._s",
+                "attribute": "_text"
+            }
+        ]
+    },
+
+    "kara": {
+        "baseURI": "https://www.kara.com.ng",
+        "searchSegment" : ["/catalogsearch/result/?q="],
+        "parentDOM": "ol.products li.product",
+        "extractables" : [
+            {
+                "variable": "link",
+                "source": "div.product_image > a.photo",
+                "attribute": "href"
+            },
+            {
+                "variable": "img",
+                "source": "div.product_image > a > span.product-image-container > span.product-image-wrapper > img.product-image-photo",
+                "attribute": "src"
+            },
+            {
+                "variable": "name",
+                "source": "div.product.details.product-item-details > h2.product-item-name > a.product-item-link",
+                "attribute": "_text"
+            },
+            {
+                "variable": "price",
+                "source": ".price-wrapper > span.price",
+                "attribute": "_text"
+            }
+        ]
+    },
+    
+
+    "slot": {
+        "baseURI": "https://slot.ng",
+        "searchSegment" : ["/?s=", "&post_type=product"],
+        "parentDOM": "ul.products li.product",
+        "extractables" : [
+            {
+                "variable": "link",
+                "source": "div.mf-product-thumbnail > a",
+                "attribute": "href"
+            },
+            {
+                "variable": "img",
+                "source": "div.mf-product-thumbnail > a > img",
+                "attribute": "src"
+            },
+            {
+                "variable": "name",
+                "source": "div.mf-product-details > div.mf-product-content > h2 > a",
+                "attribute": "_text"
+            },
+            {
+                "variable": "price",
+                "source": "div.mf-product-details > div.mf-product-price-box > span.price span.amount",
+                "attribute": "_text"
+            }
+        ]
+    }
+}
