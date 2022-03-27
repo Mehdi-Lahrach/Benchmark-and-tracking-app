@@ -33,13 +33,13 @@
     },
 
     "kara": {
-        "baseURI": "https://www.kara.com.ng",
-        "searchSegment" : ["/catalogsearch/result/?q="],
-        "parentDOM": "ol.products li.product",
+        "baseURI": "https://www.ubuy.ma/",
+        "searchSegment" : ["/search/?ref_p=ser_tp&q="],
+        "parentDOM": "div#usstore-products div.product-card",
         "extractables" : [
             {
                 "variable": "link",
-                "source": "div.product_image > a.photo",
+                "source": "figure.product-image > a.photo",
                 "attribute": "href"
             },
             {
