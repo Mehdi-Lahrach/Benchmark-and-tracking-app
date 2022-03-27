@@ -39,22 +39,22 @@
         "extractables" : [
             {
                 "variable": "link",
-                "source": "figure.product-image > a.photo",
+                "source": "a.img-detail goos-tag-product",
                 "attribute": "href"
             },
             {
                 "variable": "img",
-                "source": "div.product_image > a > span.product-image-container > span.product-image-wrapper > img.product-image-photo",
+                "source": "figure.product-image > img",
                 "attribute": "src"
             },
             {
                 "variable": "name",
-                "source": "div.product.details.product-item-details > h2.product-item-name > a.product-item-link",
+                "source": "div.product.detail > h2.product-title",
                 "attribute": "_text"
             },
             {
                 "variable": "price",
-                "source": ".price-wrapper > span.price",
+                "source": "div.product.detail > h3.product-price",
                 "attribute": "_text"
             }
         ]
